@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mimi Joyas | Panel de Ventas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="layout-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Mimi<span>Joyas</span></h1>
+                <hr>
+            </div>
+
+            <nav class="categories">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#" class="active">Nueva Colección</a></li>
+                    <li><a href="#">Pulseras</a></li>
+                    <li><a href="#">Collares</a></li>
+                    <li><a href="#">Anillos</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-cart">
+                <h3>Mi Carrito</h3>
+                <div id="cart-items-container" class="cart-items-list">
+                    <p class="empty-msg">Tu carrito está vacío</p>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span>$ <span id="subtotal-val">0.00</span></span>
+                    </div>
+                    <div class="summary-line">
+                        <span>IVA (13%):</span>
+                        <span>$ <span id="tax-val">0.00</span></span>
+                    </div>
+                    <div class="total-line">
+                        <span>Total:</span>
+                        <span>$ <span id="price-total">0.00</span></span>
+                    </div>
+                </div>
+
+                <button id="btn-comprar" class="btn-checkout" onclick="procesarCompra()">
+                    Confirmar Compra
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <h2>Catálogo de Bisutería</h2>
+                <div class="user-info">
+                    <span>Comprador: Alkindi Rivas</span>
+                </div>
+            </header>
+
+            <section id="lista-productos" class="products-grid">
+                <!-- Sección donde aparecerán los productos por medio de un array en JS -->
+            </section>
+
+            <section id="factura-section" class="factura-overlay" style="display: none;">
+                <div class="factura-card">
+                    <h2>Factura de Venta</h2>
+                    <div id="factura-detalle"></div>
+                    <button class="btn-print" onclick="nuevaCompra()">Nueva Compra</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
